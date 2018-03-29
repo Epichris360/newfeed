@@ -33,10 +33,10 @@ module.exports = {
 					output: {
 						comments: false
 					},
-					compress: {
-						drop_console: true,
-						dead_code: true
-					}
+					compress: process.env.NODE_ENV === 'production' ? {
+                        drop_console: true,
+                        dead_code: true
+                    } : {}
 				}
 			})
 		],
@@ -72,10 +72,6 @@ module.exports = {
 				query:{
 					presets:['react', 'env']
 				}
-			},
-			{
-				test: /\.json$/,
-				loader: 'json-loader'
 			},
 			{
 				test: /\.(jpg|png|svg)$/,

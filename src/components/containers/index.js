@@ -6,9 +6,11 @@
 */
 
 import Users from './Users'
+import NewsFeed from './NewsFeed'
+
 
 export {
 
-	Users
+	Users, NewsFeed
 	
 }
