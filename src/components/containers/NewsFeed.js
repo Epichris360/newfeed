@@ -12,7 +12,7 @@ import actions from '../../actions'
 */
 
 class NewsFeed extends Component {
-	constructor(){
+	constructor(){ 
 		super()
 		this.state = {
 		}
@@ -26,24 +26,41 @@ class NewsFeed extends Component {
 
 					<div className="col-lg-6 col-md-6 col-sm-8" style={style.div} >
 						
-						<div class="card" >
+						<div className="card" >
 
-							<div class="card-body" style={style.margin} >
+							<div className="card-body" style={style.margin} >
 								<img style={style.profilePic} src={profileImgUrl} /> 
 								<span> Name of Person</span>
-								<button class="btn btn-warning pull-right">Subscribe</button>
+								<button className="btn btn-warning pull-right">Subscribe</button>
 							</div>
+
 							<br />
-							<img class="card-img-top text-center" style={style.img} src="https://lh3.googleusercontent.com/PCYlrBN8dVuBfN1ESH7vQjrKHYZG_GWPXDOl1v3wGulbtthYDxNHdM3YH2Wb1XkjRuU7ZRKYKLTLNHt2HAIv-MS_DxI" alt="Card image cap"/>
-							<div class="card-body"  >
+							<img className="card-img-top text-center" style={style.img} src="https://lh3.googleusercontent.com/PCYlrBN8dVuBfN1ESH7vQjrKHYZG_GWPXDOl1v3wGulbtthYDxNHdM3YH2Wb1XkjRuU7ZRKYKLTLNHt2HAIv-MS_DxI" alt="Card image cap"/>
+
+							<div className="card-body" >
 								<hr />
-								<p class="card-text">Description Goes Here!</p>
+								<p className="card-text">Description Goes Here!</p>
 								<hr/>
-								<i class="fa fa-eye" style={{fontSize:'40px'}} ></i> 
-								<span >   30 views</span>
+								<div  >
+									<i className="fa fa-eye" style={{fontSize:'40px'}} ></i> 
+									<span >   30 views</span>
+									<button className="pull-right" style={style.transparentBtn} >
+										<span style={{fontSize:'20px'}} >37</span>
+										<i className="fa fa-heart" style={{fontSize:'40px'}} aria-hidden="true" ></i>
+									</button>
+									<button className="pull-right" style={style.transparentBtn} >
+										<span style={{fontSize:'20px'}} >Share</span>
+										<i class="fa fa-share" style={{fontSize:'40px'}} aria-hidden="true"></i>
+									</button>
+									
+								</div>
 								<hr/>
-								<img style={style.profilePic} src={profileImgUrl} /> 
+								<img style={style.profilePic} src={profileImgUrl} /> <span>    </span>
+								<input type="text" style={style.input} />
+
+								<button className="btn btn-success pull-right" >Submit!</button>
 							</div> 
+
 						</div>
 
 					</div>
@@ -68,7 +85,7 @@ export default connect(stateToProps, dispatchToProps)(NewsFeed)
 const style = {
 	div:{
 		marginBottom:'5px',
-		
+		paddingBottom:'7px',
 		boxShadow: '10px 10px 5px grey',
 		borderStyle: 'solid',
 		borderColor: 'grey',
@@ -88,6 +105,13 @@ const style = {
 	},
 	margin:{
 		marginTop:'5px'
+	},
+	input:{
+		border: 'none', width:"350px", backgroundColor:"#f8ffdb", height:'40px'
+	},
+	transparentBtn:{
+		backgroundColor:'transparent',
+		borderColor:'transparent'
 	}
 }
 

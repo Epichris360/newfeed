@@ -289,10 +289,10 @@ var NewsFeed = function (_Component) {
 						{ className: 'col-lg-6 col-md-6 col-sm-8', style: style.div },
 						_react2.default.createElement(
 							'div',
-							{ 'class': 'card' },
+							{ className: 'card' },
 							_react2.default.createElement(
 								'div',
-								{ 'class': 'card-body', style: style.margin },
+								{ className: 'card-body', style: style.margin },
 								_react2.default.createElement('img', { style: style.profilePic, src: profileImgUrl }),
 								_react2.default.createElement(
 									'span',
@@ -301,30 +301,66 @@ var NewsFeed = function (_Component) {
 								),
 								_react2.default.createElement(
 									'button',
-									{ 'class': 'btn btn-warning pull-right' },
+									{ className: 'btn btn-warning pull-right' },
 									'Subscribe'
 								)
 							),
 							_react2.default.createElement('br', null),
-							_react2.default.createElement('img', { 'class': 'card-img-top text-center', style: style.img, src: 'https://lh3.googleusercontent.com/PCYlrBN8dVuBfN1ESH7vQjrKHYZG_GWPXDOl1v3wGulbtthYDxNHdM3YH2Wb1XkjRuU7ZRKYKLTLNHt2HAIv-MS_DxI', alt: 'Card image cap' }),
+							_react2.default.createElement('img', { className: 'card-img-top text-center', style: style.img, src: 'https://lh3.googleusercontent.com/PCYlrBN8dVuBfN1ESH7vQjrKHYZG_GWPXDOl1v3wGulbtthYDxNHdM3YH2Wb1XkjRuU7ZRKYKLTLNHt2HAIv-MS_DxI', alt: 'Card image cap' }),
 							_react2.default.createElement(
 								'div',
-								{ 'class': 'card-body' },
+								{ className: 'card-body' },
 								_react2.default.createElement('hr', null),
 								_react2.default.createElement(
 									'p',
-									{ 'class': 'card-text' },
+									{ className: 'card-text' },
 									'Description Goes Here!'
 								),
 								_react2.default.createElement('hr', null),
-								_react2.default.createElement('i', { 'class': 'fa fa-eye', style: { fontSize: '40px' } }),
+								_react2.default.createElement(
+									'div',
+									null,
+									_react2.default.createElement('i', { className: 'fa fa-eye', style: { fontSize: '40px' } }),
+									_react2.default.createElement(
+										'span',
+										null,
+										'   30 views'
+									),
+									_react2.default.createElement(
+										'button',
+										{ className: 'pull-right', style: style.transparentBtn },
+										_react2.default.createElement(
+											'span',
+											{ style: { fontSize: '20px' } },
+											'37'
+										),
+										_react2.default.createElement('i', { className: 'fa fa-heart', style: { fontSize: '40px' }, 'aria-hidden': 'true' })
+									),
+									_react2.default.createElement(
+										'button',
+										{ className: 'pull-right', style: style.transparentBtn },
+										_react2.default.createElement(
+											'span',
+											{ style: { fontSize: '20px' } },
+											'Share'
+										),
+										_react2.default.createElement('i', { 'class': 'fa fa-share', style: { fontSize: '40px' }, 'aria-hidden': 'true' })
+									)
+								),
+								_react2.default.createElement('hr', null),
+								_react2.default.createElement('img', { style: style.profilePic, src: profileImgUrl }),
+								' ',
 								_react2.default.createElement(
 									'span',
 									null,
-									'   30 views'
+									'    '
 								),
-								_react2.default.createElement('hr', null),
-								_react2.default.createElement('img', { style: style.profilePic, src: profileImgUrl })
+								_react2.default.createElement('input', { type: 'text', style: style.input }),
+								_react2.default.createElement(
+									'button',
+									{ className: 'btn btn-success pull-right' },
+									'Submit!'
+								)
 							)
 						)
 					),
@@ -347,7 +383,7 @@ exports.default = (0, _reactRedux.connect)(stateToProps, dispatchToProps)(NewsFe
 var style = {
 	div: {
 		marginBottom: '5px',
-
+		paddingBottom: '7px',
 		boxShadow: '10px 10px 5px grey',
 		borderStyle: 'solid',
 		borderColor: 'grey',
@@ -367,6 +403,13 @@ var style = {
 	},
 	margin: {
 		marginTop: '5px'
+	},
+	input: {
+		border: 'none', width: "350px", backgroundColor: "#f8ffdb", height: '40px'
+	},
+	transparentBtn: {
+		backgroundColor: 'transparent',
+		borderColor: 'transparent'
 	}
 };
 
