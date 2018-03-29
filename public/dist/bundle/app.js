@@ -262,41 +262,115 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 */
 
-var Home = function (_Component) {
-	_inherits(Home, _Component);
+var NewsFeed = function (_Component) {
+	_inherits(NewsFeed, _Component);
 
-	function Home() {
-		_classCallCheck(this, Home);
+	function NewsFeed() {
+		_classCallCheck(this, NewsFeed);
 
-		var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this));
+		var _this = _possibleConstructorReturn(this, (NewsFeed.__proto__ || Object.getPrototypeOf(NewsFeed)).call(this));
 
 		_this.state = {};
 		return _this;
 	}
 
-	_createClass(Home, [{
+	_createClass(NewsFeed, [{
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
 				'div',
-				null,
+				{ className: 'container' },
 				_react2.default.createElement(
-					'h1',
-					null,
-					'Hi'
+					'div',
+					{ className: 'row' },
+					_react2.default.createElement('div', { className: 'col-lg-3 col-md-3 col-sm-2' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'col-lg-6 col-md-6 col-sm-8', style: style.div },
+						_react2.default.createElement(
+							'div',
+							{ 'class': 'card' },
+							_react2.default.createElement(
+								'div',
+								{ 'class': 'card-body', style: style.margin },
+								_react2.default.createElement('img', { style: style.profilePic, src: profileImgUrl }),
+								_react2.default.createElement(
+									'span',
+									null,
+									' Name of Person'
+								),
+								_react2.default.createElement(
+									'button',
+									{ 'class': 'btn btn-warning pull-right' },
+									'Subscribe'
+								)
+							),
+							_react2.default.createElement('br', null),
+							_react2.default.createElement('img', { 'class': 'card-img-top text-center', style: style.img, src: 'https://lh3.googleusercontent.com/PCYlrBN8dVuBfN1ESH7vQjrKHYZG_GWPXDOl1v3wGulbtthYDxNHdM3YH2Wb1XkjRuU7ZRKYKLTLNHt2HAIv-MS_DxI', alt: 'Card image cap' }),
+							_react2.default.createElement(
+								'div',
+								{ 'class': 'card-body' },
+								_react2.default.createElement('hr', null),
+								_react2.default.createElement(
+									'p',
+									{ 'class': 'card-text' },
+									'Description Goes Here!'
+								),
+								_react2.default.createElement('hr', null),
+								_react2.default.createElement('i', { 'class': 'fa fa-eye', style: { fontSize: '40px' } }),
+								_react2.default.createElement(
+									'span',
+									null,
+									'   30 views'
+								),
+								_react2.default.createElement('hr', null),
+								_react2.default.createElement('img', { style: style.profilePic, src: profileImgUrl })
+							)
+						)
+					),
+					_react2.default.createElement('div', { className: 'col-lg-3 col-md-3 col-sm-2' })
 				)
 			);
 		}
 	}]);
 
-	return Home;
+	return NewsFeed;
 }(_react.Component);
 
 var stateToProps = function stateToProps(state) {};
 
 var dispatchToProps = function dispatchToProps(dispatch) {};
 
-exports.default = (0, _reactRedux.connect)(stateToProps, dispatchToProps)(Home);
+exports.default = (0, _reactRedux.connect)(stateToProps, dispatchToProps)(NewsFeed);
+
+
+var style = {
+	div: {
+		marginBottom: '5px',
+
+		boxShadow: '10px 10px 5px grey',
+		borderStyle: 'solid',
+		borderColor: 'grey',
+		borderWidth: '1px'
+	},
+	card: {
+		width: '18rem'
+	},
+	img: {
+		maxHeight: '100%',
+		maxWidth: '100%',
+		marginLeft: 'auto',
+		marginRight: 'auto'
+	},
+	profilePic: {
+		width: "40px", height: "40px", borderRadius: '50%'
+	},
+	margin: {
+		marginTop: '5px'
+	}
+};
+
+var profileImgUrl = "https://lh3.googleusercontent.com/lqOYf__cprrWffF0GHa8zHEbdTrFMHVYgBspgD0i1Bc7TO1upOsAZAe85sZFUFPHYicEOEYmqJT7775ADo5cGqMlvy4";
 
 /***/ }),
 
@@ -754,15 +828,15 @@ exports.default = (0, _reactRedux.connect)(stateToProps, dispatchToProps)(Users)
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.Home = exports.Users = undefined;
+exports.NewsFeed = exports.Users = undefined;
 
 var _Users = __webpack_require__(42);
 
 var _Users2 = _interopRequireDefault(_Users);
 
-var _Home = __webpack_require__(21);
+var _NewsFeed = __webpack_require__(21);
 
-var _Home2 = _interopRequireDefault(_Home);
+var _NewsFeed2 = _interopRequireDefault(_NewsFeed);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -774,7 +848,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 */
 
 exports.Users = _Users2.default;
-exports.Home = _Home2.default;
+exports.NewsFeed = _NewsFeed2.default;
 
 /***/ }),
 
@@ -1173,7 +1247,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var app = _react2.default.createElement(
 	_reactRedux.Provider,
 	{ store: _stores2.default.configure(null) },
-	_react2.default.createElement(_containers.Home, null)
+	_react2.default.createElement(_containers.NewsFeed, null)
 );
 
 _reactDom2.default.render(app, document.getElementById('root'));
