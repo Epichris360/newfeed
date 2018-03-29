@@ -320,7 +320,7 @@ var NewsFeed = function (_Component) {
 								_react2.default.createElement(
 									'div',
 									null,
-									_react2.default.createElement('i', { className: 'fa fa-eye', style: { fontSize: '40px' } }),
+									_react2.default.createElement('i', { className: 'fa fa-eye', style: { fontSize: '30px' } }),
 									_react2.default.createElement(
 										'span',
 										null,
@@ -331,20 +331,20 @@ var NewsFeed = function (_Component) {
 										{ className: 'pull-right', style: style.transparentBtn },
 										_react2.default.createElement(
 											'span',
-											{ style: { fontSize: '20px' } },
-											'37'
+											{ style: { fontSize: '17px' } },
+											'37  '
 										),
-										_react2.default.createElement('i', { className: 'fa fa-heart', style: { fontSize: '40px' }, 'aria-hidden': 'true' })
+										_react2.default.createElement('i', { className: 'fa fa-heart', style: { fontSize: '30px' }, 'aria-hidden': 'true' })
 									),
 									_react2.default.createElement(
 										'button',
 										{ className: 'pull-right', style: style.transparentBtn },
 										_react2.default.createElement(
 											'span',
-											{ style: { fontSize: '20px' } },
-											'Share'
+											{ style: { fontSize: '17px' } },
+											'Share '
 										),
-										_react2.default.createElement('i', { 'class': 'fa fa-share', style: { fontSize: '40px' }, 'aria-hidden': 'true' })
+										_react2.default.createElement('i', { 'class': 'fa fa-share', style: { fontSize: '30px' }, 'aria-hidden': 'true' })
 									)
 								),
 								_react2.default.createElement('hr', null),
@@ -382,7 +382,8 @@ exports.default = (0, _reactRedux.connect)(stateToProps, dispatchToProps)(NewsFe
 
 var style = {
 	div: {
-		marginBottom: '5px',
+		marginBottom: '20px',
+		marginTop: '20px',
 		paddingBottom: '7px',
 		boxShadow: '10px 10px 5px grey',
 		borderStyle: 'solid',

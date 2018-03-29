@@ -15,6 +15,7 @@ class NewsFeed extends Component {
 	constructor(){ 
 		super()
 		this.state = {
+			
 		}
 	}
 
@@ -42,15 +43,15 @@ class NewsFeed extends Component {
 								<p className="card-text">Description Goes Here!</p>
 								<hr/>
 								<div  >
-									<i className="fa fa-eye" style={{fontSize:'40px'}} ></i> 
+									<i className="fa fa-eye" style={{fontSize:'30px'}} ></i> 
 									<span >   30 views</span>
 									<button className="pull-right" style={style.transparentBtn} >
-										<span style={{fontSize:'20px'}} >37</span>
-										<i className="fa fa-heart" style={{fontSize:'40px'}} aria-hidden="true" ></i>
+										<span style={{fontSize:'17px'}} >37  </span>
+										<i className="fa fa-heart" style={{fontSize:'30px'}} aria-hidden="true" ></i>
 									</button>
 									<button className="pull-right" style={style.transparentBtn} >
-										<span style={{fontSize:'20px'}} >Share</span>
-										<i class="fa fa-share" style={{fontSize:'40px'}} aria-hidden="true"></i>
+										<span style={{fontSize:'17px'}} >Share </span>
+										<i class="fa fa-share" style={{fontSize:'30px'}} aria-hidden="true"></i>
 									</button>
 									
 								</div>
@@ -84,7 +85,8 @@ export default connect(stateToProps, dispatchToProps)(NewsFeed)
 
 const style = {
 	div:{
-		marginBottom:'5px',
+		marginBottom:'20px',
+		marginTop:'20px',
 		paddingBottom:'7px',
 		boxShadow: '10px 10px 5px grey',
 		borderStyle: 'solid',
@@ -112,7 +114,7 @@ const style = {
 	transparentBtn:{
 		backgroundColor:'transparent',
 		borderColor:'transparent'
-	}
+	},
 }
 
 const profileImgUrl = "https://lh3.googleusercontent.com/lqOYf__cprrWffF0GHa8zHEbdTrFMHVYgBspgD0i1Bc7TO1upOsAZAe85sZFUFPHYicEOEYmqJT7775ADo5cGqMlvy4"
